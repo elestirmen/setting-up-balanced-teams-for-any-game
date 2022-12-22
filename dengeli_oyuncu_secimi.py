@@ -68,7 +68,7 @@ while True:
 print("Two teams have been created! first team: ")
 for player in team_a:
     print(f"{player['name']} ({player['ability']})")
-print("\nsecond team: ")
+print("\nSecond team: ")
 for player in team_b:
     print(f"{player['name']} ({player['ability']})")
     

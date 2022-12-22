@@ -1,75 +1,75 @@
 import random
 
-# Öncelikle, futbolculardan oluşan bir liste oluşturuyoruz
-oyuncular = [
-    {"name": "Ahmet", "yetenek": 7},
-    {"name": "Mehmet", "yetenek": 8},
-    {"name": "Fatma", "yetenek": 3},
-    {"name": "Ali", "yetenek": 9},
-    {"name": "Ayşe", "yetenek": 4},
-    {"name": "Elif", "yetenek": 3},
-    {"name": "Emre", "yetenek": 8},
-    {"name": "Gizem", "yetenek": 1},
-    {"name": "Can", "yetenek": 6},
-    {"name": "Deniz", "yetenek": 7},
-    {"name": "Burak", "yetenek": 8},
-    {"name": "Dilara", "yetenek": 6},
-    {"name": "Ege", "yetenek": 7},
-    {"name": "Esra", "yetenek": 4},
-    {"name": "Furkan", "yetenek": 9},
-    {"name": "Gökhan", "yetenek": 8},
-    {"name": "Hakan", "yetenek": 10},
-    {"name": "İrem", "yetenek": 1},
-    {"name": "İsmail", "yetenek": 7},
-    {"name": "Kerem", "yetenek": 8},
-    {"name": "Leyla", "yetenek": 2},
-    {"name": "Mustafa", "yetenek": 7},
-    {"name": "Nur", "yetenek": 3},
-    {"name": "Özge", "yetenek": 4},
-    {"name": "Pelin", "yetenek": 3},
-    {"name": "Rümeysa", "yetenek": 2},
-    {"name": "Sena", "yetenek": 1},
-    {"name": "Tugba", "yetenek": 3},
-    {"name": "Umut", "yetenek": 8},
-    {"name": "takoz_recep", "yetenek": 2},
-    {"name": "Yasemin", "yetenek": 5},
-    {"name": "Zeynep", "yetenek": 2}
+# First, we create a list of players
+players = [
+    {"name": "Ahmet", "ability": 7},
+    {"name": "Mehmet", "ability": 8},
+    {"name": "Fatma", "ability": 3},
+    {"name": "Ali", "ability": 9},
+    {"name": "Ayşe", "ability": 4},
+    {"name": "Elif", "ability": 3},
+    {"name": "Emre", "ability": 8},
+    {"name": "Gizem", "ability": 1},
+    {"name": "Can", "ability": 6},
+    {"name": "Deniz", "ability": 7},
+    {"name": "Burak", "ability": 8},
+    {"name": "Dilara", "ability": 6},
+    {"name": "Ege", "ability": 7},
+    {"name": "Esra", "ability": 4},
+    {"name": "Furkan", "ability": 9},
+    {"name": "Gökhan", "ability": 8},
+    {"name": "İpek", "ability": 3},
+    {"name": "İrem", "ability": 1},
+    {"name": "İsmail", "ability": 7},
+    {"name": "Kerem", "ability": 8},
+    {"name": "Leyla", "ability": 2},
+    {"name": "Mustafa", "ability": 7},
+    {"name": "Nur", "ability": 3},
+    {"name": "Özge", "ability": 4},
+    {"name": "Pelin", "ability": 3},
+    {"name": "Rümeysa", "ability": 2},
+    {"name": "Sena", "ability": 1},
+    {"name": "Tugba", "ability": 3},
+    {"name": "Umut", "ability": 8},
+    {"name": "Vildan", "ability": 2},
+    {"name": "Yasemin", "ability": 5},
+    {"name": "Zeynep", "ability": 2}
 ]
 
-# Bu listeyi kullanarak rastgele iki takım oluşturacağız
-
+# We will randomly generate two teams using this list
 
 while True:
     team_a = []
     team_b = []
-    # Futbolculardan rastgele 14 tane seçiyoruz
-    secilen_oyuncular = random.sample(oyuncular, 14)
+    # We randomly select 14 of the football players    
+    selected_players = random.sample(players, 14)
     
-    # Yeteneklerine göre sıralıyoruz
-    #sorted_oyuncular = sorted(secilen_oyuncular, key=lambda x: x["yetenek"], reverse=True)
 
-    # İki takımı oluşturmak için döngü oluşturuyoruz
-    for i, oyuncu in enumerate(secilen_oyuncular):
+    # We loop to create the two teams
+    for i, player in enumerate(selected_players):
         if i < 7:
-            team_a.append(oyuncu)
+            team_a.append(player)
         else:
-            team_b.append(oyuncu)
+            team_b.append(player)
     x=0
     y=0        
     for j in range(len(team_a)):
                
-        x += team_a[j]["yetenek"]
-        y += team_b[j]["yetenek"]
+        x += team_a[j]["ability"]
+        y += team_b[j]["ability"]
     
     if abs(x-y)<=1:
         break
 
 
 
-# İki takımı yazdırıyoruz
-print("İki takım oluşturuldu! İlk takım: ")
-for oyuncu in team_a:
-    print(f"{oyuncu['name']} ({oyuncu['yetenek']})")
-print("\nİkinci takım: ")
-for oyuncu in team_b:
-    print(f"{oyuncu['name']} ({oyuncu['yetenek']})")
+# We print two player teams
+
+print("Two teams have been created! first team: ")
+for player in team_a:
+    print(f"{player['name']} ({player['ability']})")
+print("\nsecond team: ")
+for player in team_b:
+    print(f"{player['name']} ({player['ability']})")
+    
+    

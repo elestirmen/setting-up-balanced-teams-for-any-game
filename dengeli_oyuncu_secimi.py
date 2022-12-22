@@ -2,7 +2,7 @@ import random
 
 # First, we create a list of players
 players = [
-    {"name": "Ahmet", "ability": 7},
+    {"name": "james", "ability": 7},
     {"name": "Mehmet", "ability": 8},
     {"name": "Fatma", "ability": 3},
     {"name": "Ali", "ability": 9},

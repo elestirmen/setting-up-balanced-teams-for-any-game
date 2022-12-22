@@ -1,7 +1,7 @@
 import random
 
 # First, we create a list of players
-footballers = [
+players = [
     {"name": "Ahmet", "ability": 7},
     {"name": "Mehmet", "ability": 8},
     {"name": "Fatma", "ability": 3},
@@ -42,15 +42,15 @@ while True:
     team_a = []
     team_b = []
     # We randomly select 14 of the football players    
-    selected_footballers = random.sample(footballers, 14)
+    selected_players = random.sample(players, 14)
     
 
     # We loop to create the two teams
-    for i, footballer in enumerate(selected_footballers):
+    for i, player in enumerate(selected_players):
         if i < 7:
-            team_a.append(footballer)
+            team_a.append(player)
         else:
-            team_b.append(footballer)
+            team_b.append(player)
     x=0
     y=0        
     for j in range(len(team_a)):
@@ -66,10 +66,10 @@ while True:
 # We print two player teams
 
 print("Two teams have been created! first team: ")
-for footballer in team_a:
-    print(f"{footballer['name']} ({footballer['ability']})")
+for player in team_a:
+    print(f"{player['name']} ({player['ability']})")
 print("\nsecond team: ")
-for footballer in team_b:
-    print(f"{footballer['name']} ({footballer['ability']})")
+for player in team_b:
+    print(f"{player['name']} ({player['ability']})")
     
     

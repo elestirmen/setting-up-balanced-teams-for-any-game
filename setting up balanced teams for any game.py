@@ -27,7 +27,7 @@ players = [
     {"name": "Rebecca", "ability": 3},
     {"name": "Richard", "ability": 4},
     {"name": "Susan", "ability": 3},
-    {"name": "Rümeysa", "ability": 2},
+    {"name": "Remy", "ability": 10},
     {"name": "Charles", "ability": 1},
     {"name": "Patricia", "ability": 3},
     {"name": "Thomas", "ability": 8},

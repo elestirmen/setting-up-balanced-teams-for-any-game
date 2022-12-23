@@ -41,13 +41,16 @@ players = [
 while True:
     team_a = []
     team_b = []
-    # We randomly select 14 of the players    
-    selected_players = random.sample(players, 14)
+
+    # We randomly select 14 of the players
+    number_of_players=17
+
+    selected_players = random.sample(players, number_of_players)
     
 
     # We loop to create the two teams
     for i, player in enumerate(selected_players):
-        if i < 7:
+        if i < number_of_players/2:
             team_a.append(player)
         else:
             team_b.append(player)

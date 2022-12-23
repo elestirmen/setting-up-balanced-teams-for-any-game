@@ -41,7 +41,7 @@ players = [
 while True:
     team_a = []
     team_b = []
-    # We randomly select 14 of the football players    
+    # We randomly select 14 of the players    
     selected_players = random.sample(players, 14)
     
 
